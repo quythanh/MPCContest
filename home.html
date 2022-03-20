@@ -18,33 +18,35 @@
 
 <body>
     <div class="app">
-        <div class="header">
-            <div class="header-left">MPC</div>
-            <div class="header-right">
-                <div class="header-right-img">
-                    <i class="fa-solid fa-user"></i>
-                </div>
+        <header class="header">
+            <div class="header-grid grid">
+                <div class="header-left">MPC</div>
+                <div class="header-right">
+                    <div class="header-right-img">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
 
-                <ul class="header submenu">
-                    <li>
-                        <div class="submenu_icon">
-                            <i class="fa-solid fa-user-pen"></i>
-                        </div>
-                        <div class="submenu_text">
-                            Edit Profile
-                        </div>
-                    </li>
-                    <li>
-                        <div class="submenu_icon">
-                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                        </div>
-                        <div class="submenu_text">
-                            Logout
-                        </div>
-                    </li>
-                </ul>
+                    <ul class="header submenu">
+                        <li>
+                            <div class="submenu_icon">
+                                <i class="fa-solid fa-user-pen"></i>
+                            </div>
+                            <div class="submenu_text">
+                                Edit Profile
+                            </div>
+                        </li>
+                        <li>
+                            <div class="submenu_icon">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            </div>
+                            <div class="submenu_text logout">
+                                Logout
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </header>
 
         <div id="main">
             <div class="main-left">
@@ -97,19 +99,85 @@
                         <h2 class="menu_name">Favorite</h2>
                     </li>
                 </div>
+            </div>
 
-                <div class="main-center">
-
-                </div>
-
-                <div class="main-right">
-
+            <div class="main-center">
+                <div class="create_post">
+                    <div class="create_post_img">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="create_post_name"></div>
                 </div>
             </div>
 
+            <div class="main-right">
+                <div class="main-right_header">Online group</div>
+
+                <hr/>
+
+                <div class="menu-member">
+                    <li class="menu_list">
+                        <div class="menu_list_icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h4 class="menu_list_name">User 1</h4>
+                    </li>
+                    <li class="menu_list">
+                        <div class="menu_list_icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h4 class="menu_list_name">User 2</h4>
+                    </li>
+                    <li class="menu_list">
+                        <div class="menu_list_icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h4 class="menu_list_name">User 3</h4>
+                    </li>
+                    <li class="menu_list">
+                        <div class="menu_list_icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h4 class="menu_list_name">User 4</h4>
+                    </li>
+                </div>
+
+                <div class="main-right_header">Online group</div>
+
+                <hr/>
+
+                <div class="menu-member">
+                    <li class="menu_list">
+                        <div class="menu_list_icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <h4 class="menu_list_name">Group 1</h4>
+                    </li>
+                    <li class="menu_list">
+                        <div class="menu_list_icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <h4 class="menu_list_name">Group 2</h4>
+                    </li>
+                    <li class="menu_list">
+                        <div class="menu_list_icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <h4 class="menu_list_name">Group 3</h4>
+                    </li>
+                </div>
+            </div>
         </div>
 
-        <script src="./assets/js/home.js"></script>
+        <footer class="footer">
+            <div class="footer-grid grid">
+                <div class="footer_content">Goodluck!</div>
+                <div class="footer_box"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./assets/js/home.js"></script>
 </body>
 
 </html>

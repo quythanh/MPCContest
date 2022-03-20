@@ -1,36 +1,50 @@
 .app {
     position: relative;
+    width: 100%;
+}
+
+.grid {
+    max-width: var(--grid);
+    margin: 0 auto;
 }
 
 
 /* =============================== HEADER ================================ */
 
 .header {
+    width: 100%;
+    box-shadow: 0 2px 8px #ccc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: whitesmoke;
+    z-index: 10;
+}
+
+.header-grid {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    height: 80px;
-    background-color: whitesmoke;
-    position: fixed;
-    box-shadow: 0 2px 8px #ccc;
-    margin: 0 auto;
+    align-items: center;
+    height: var(--header-height);
 }
 
 .header-left {
     font-size: 4.4rem;
     font-weight: 600;
     cursor: pointer;
-    transform: translateY(10%);
     align-items: center;
     background: -webkit-linear-gradient(#AEA2F7, #D9D5FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-left: 200px;
 }
 
 .header-right {
     font-size: 20px;
     align-items: center;
-    transform: translateY(25%);
+    position: relative;
+    width: 200px;
 }
 
 .header-right-img {
@@ -52,8 +66,8 @@
     display: none;
     position: absolute;
     top: 50px;
-    right: 0;
-    min-width: 160px;
+    left: -110px;
+    width: 160px;
 }
 
 .submenu::after {
@@ -69,6 +83,7 @@
 .submenu>li {
     display: flex;
     padding: 10px;
+    width: 100%;
 }
 
 .submenu>li:hover {
@@ -80,6 +95,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-content: flex-start;
+    align-items: flex-start;
 }
 
 .submenu_text {
@@ -97,24 +114,151 @@
 #main {
     display: flex;
     margin-top: 100px;
+    padding: 0 200px;
+    flex-direction: row;
 }
 
+.menu_item {
+    cursor: pointer;
+    display: flex;
+    padding: 10px 20px;
+    flex-direction: row;
+}
+
+.menu_item>*,
+.menu_list>* {
+    font-size: 1.6rem;
+}
+
+.menu_list {
+    cursor: pointer;
+    flex-direction: row;
+    display: flex;
+    padding: 10px 5px;
+}
+
+
+/* =============================== MAIN LEFT ================================ */
+
 .main-left {
-    position: absolute;
+    flex: 2;
 }
 
 .main-left-search {
     display: flex;
     flex: 3;
-    border-radius: 10px;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 10px;
+    font-size: small;
+    border-radius: 5px;
     border: 1px solid black;
-    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .main-left-search-input {
     border: none;
+    width: 100%;
+    background-color: whitesmoke;
 }
 
 .main-left-search-input:focus {
     border: none;
+}
+
+
+/* =============================== MAIN CENTER ================================ */
+
+.main-center {
+    flex: 3;
+    margin: 10px 100px;
+    width: 100%;
+}
+
+.create_post {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+/* =============================== MAIN RIGHT ================================ */
+
+.main-right {
+    flex: 2;
+}
+
+.main-right_header {
+    font-size: 2.4rem;
+}
+
+
+/* =============================== FOOTER ================================ */
+
+.footer {
+    width: 100%;
+    box-shadow: 0 2px 8px #ccc;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: whitesmoke;
+    height: 40px;
+}
+
+.footer-grid {
+    display: flex;
+    align-items: center;
+    gap: 0 12px;
+}
+
+.footer_content {
+    font-size: 1.6rem;
+}
+
+.footer_box {
+    position: relative;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color);
+    overflow: hidden;
+    animation: spin 3s ease infinite;
+}
+
+@keyframes spin {
+    50%,
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.footer_box::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    transform-origin: center bottom;
+    transform: scaleY(1);
+    animation: fill 3s linear infinite;
+}
+
+@keyframes fill {
+    25%,
+    50% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
 }
