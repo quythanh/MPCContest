@@ -1,0 +1,206 @@
+#app {
+    margin: 0 auto;
+}
+
+#heading {
+    text-align: center;
+    font-size: 6.6rem;
+    margin-bottom: 100px;
+    padding-top: 20px;
+}
+
+.sub_heading {
+    font-size: 2.4rem;
+}
+
+
+/* =============================== BOX ================================ */
+
+#box {
+    display: flex;
+    justify-content: space-evenly;
+    width: 700px;
+    height: 350px;
+    position: relative;
+}
+
+#left__box,
+#right__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 350px;
+    font-size: 1.2rem;
+    padding: 5px 40px;
+    margin: 40px 0;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+#black__box {
+    background-color: rgba(0, 0, 0, .85);
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 2%;
+    bottom: 0;
+    transition: all ease-in-out 0.5s;
+}
+
+#black__box.active {
+    left: 2%;
+    right: 50%;
+}
+
+
+/* =============================== FORM ================================ */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 65%;
+    width: 100%;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.form-input {
+    border: 1px solid #ccc;
+}
+
+.form-input:focus {
+    border: 1px solid var(--primary-color);
+}
+
+.form-label {
+    font-size: 1.2rem;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all ease-in 0.2s;
+}
+
+.form-input:focus+.form-label,
+.form-input:not(:placeholder-shown)+.form-label {
+    top: 12%;
+    background-color: #fff;
+}
+
+.form-btn {
+    border: none;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    padding: 4px 12px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.form-btn:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.form-redirect {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.form-redirect:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* ============================== TOAST ================================ */
+
+#toast {
+    top: 32px;
+    right: 32px;
+    z-index: 1;
+    position: absolute;
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 20px 0;
+    width: 300px;
+    border-left: 4px solid;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    transition: all linear 0.3s;
+    height: 60px;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.toast--error {
+    border-color: #ff623d;
+}
+
+.toast--error .toast__icon {
+    color: #ff623d;
+}
+
+.toast+.toast {
+    margin-top: 24px;
+}
+
+.toast__icon {
+    font-size: 24px;
+}
+
+.toast__icon>i {
+    font-size: 2rem;
+}
+
+.toast__icon,
+.toast__close {
+    padding: 0 16px;
+}
+
+.toast__body {
+    flex-grow: 1;
+}
+
+.toast__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.toast__msg {
+    font-size: 14px;
+    color: #888;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+.toast__close {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}

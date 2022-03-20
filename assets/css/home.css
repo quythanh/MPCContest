@@ -1,0 +1,120 @@
+.app {
+    position: relative;
+}
+
+
+/* =============================== HEADER ================================ */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background-color: whitesmoke;
+    position: fixed;
+    box-shadow: 0 2px 8px #ccc;
+    margin: 0 auto;
+}
+
+.header-left {
+    font-size: 4.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transform: translateY(10%);
+    align-items: center;
+    background: -webkit-linear-gradient(#AEA2F7, #D9D5FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-right {
+    font-size: 20px;
+    align-items: center;
+    transform: translateY(25%);
+}
+
+.header-right-img {
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.header-right-img>i {
+    font-size: 1.6rem;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    min-width: 160px;
+}
+
+.submenu::after {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: 0;
+    width: 100%;
+    height: 16px;
+    background: transparent;
+}
+
+.submenu>li {
+    display: flex;
+    padding: 10px;
+}
+
+.submenu>li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all ease 0.2s;
+}
+
+.header-right:hover>.submenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.submenu_text {
+    margin-left: 5px;
+}
+
+.submenu_text,
+.submenu_icon {
+    font-size: 1.6rem;
+}
+
+
+/* =============================== MAIN ================================ */
+
+#main {
+    display: flex;
+    margin-top: 100px;
+}
+
+.main-left {
+    position: absolute;
+}
+
+.main-left-search {
+    display: flex;
+    flex: 3;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-left: 20px;
+}
+
+.main-left-search-input {
+    border: none;
+}
+
+.main-left-search-input:focus {
+    border: none;
+}
