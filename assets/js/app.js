@@ -16,7 +16,6 @@ const moveBox = () => {
 }
 
 users = getUsers()
-console.log(users)
 
 const check = (username, password = "") => {
     let users = getUsers()
@@ -55,7 +54,7 @@ const signUp = (username, password) => {
 const signIn = (username, password) => {
     let users = getUsers()
     if (check(username, password)) {
-        window.location.href = '/home.html'
+        window.location.href = './home.html'
 
         localStorage.setItem("users", JSON.stringify(users))
 
@@ -98,23 +97,23 @@ document.getElementById('btn-sign-in').addEventListener('click', () => {
 const toast = msg => {
     const main = document.getElementById('toast')
 
-    const newToast = document.createElement("div");
+    const newToast = document.createElement("div")
 
     // Auto remove toast
     const autoRemoveId = setTimeout(() => {
-        main.removeChild(newToast);
-    }, 3000);
+        main.removeChild(newToast)
+    }, 3000)
 
     // Remove toast when clicked
     newToast.onclick = e => {
         if (e.target.closest(".toast__close")) {
-            main.removeChild(newToast);
-            clearTimeout(autoRemoveId);
+            main.removeChild(newToast)
+            clearTimeout(autoRemoveId)
         }
-    };
+    }
 
-    newToast.classList.add("toast", `toast--error`);
-    newToast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s 3s forwards`;
+    newToast.classList.add("toast", `toast--error`)
+    newToast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s 3s forwards`
 
     newToast.innerHTML = `
                     <div class="toast__icon">
@@ -127,6 +126,6 @@ const toast = msg => {
                     <div class="toast__close">
                         <i class="fas fa-times"></i>
                     </div>
-                `;
-    main.appendChild(newToast);
+                `
+    main.appendChild(newToast)
 }
